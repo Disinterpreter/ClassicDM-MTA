@@ -1,9 +1,15 @@
 <meta>
 	<script src="main_s.lua" />
 	<script src="main_cl.lua" type="client" />
+	
+	<script src="tables.lua" type="shared" />
+	
 	<script src="login/Account.lua" />
 	<script src="login/GUILogin_cl.lua" type="client" />
 	<script src="tables.lua" />
 	<script src="spawn_s.lua" />
 	<script src="position.lua" />
+	
+	<script src="gunstore/store_cl.lua" type="client" />
+	<script src="gunstore/store_s.lua" type="server" />
 </meta>
