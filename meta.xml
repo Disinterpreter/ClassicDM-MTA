@@ -1,0 +1,7 @@
+<meta>
+	<script src="main_s.lua" />
+	<script src="main_cl.lua" type="client" />
+	<script src="login/Account.lua" />
+	<script src="login/GUILogin_cl.lua" type="client" />
+	<script src="spawn_s.lua" />
+</meta>
