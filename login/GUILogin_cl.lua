@@ -13,7 +13,7 @@ GUIEditor = {
 GUIEditor.window[1] = guiCreateWindow(446, 365, 317, 264, "", false)
 guiWindowSetSizable(GUIEditor.window[1], false)
 
-GUIEditor.edit[1] = guiCreateEdit(139, 93, 121, 26, "", false, GUIEditor.window[1])
+GUIEditor.edit[1] = guiCreateEdit(139, 93, 121, 26, getPlayerName (localPlayer), false, GUIEditor.window[1])
 GUIEditor.edit[2] = guiCreateEdit(139, 129, 121, 26, "", false, GUIEditor.window[1])
 GUIEditor.button[1] = guiCreateButton(226, 206, 81, 34, "OK!", false, GUIEditor.window[1])
 guiSetProperty(GUIEditor.button[1], "NormalTextColour", "FFAAAAAA")
@@ -21,7 +21,7 @@ GUIEditor.button[2] = guiCreateButton(9, 204, 79, 36, "Guest", false, GUIEditor.
 guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFAAAAAA")
 GUIEditor.label[1] = guiCreateLabel(96, 98, 33, 16, "Login:", false, GUIEditor.window[1])
 GUIEditor.label[2] = guiCreateLabel(72, 129, 57, 16, "Password:", false, GUIEditor.window[1])
-
+guiEditSetMasked ( GUIEditor.edit[2], true )
 
 RegisterInfo.window[1] = guiCreateWindow(376, 390, 470, 174, "Account not registered", false)
 guiWindowSetSizable(RegisterInfo.window[1], false)

@@ -3,5 +3,7 @@
 	<script src="main_cl.lua" type="client" />
 	<script src="login/Account.lua" />
 	<script src="login/GUILogin_cl.lua" type="client" />
+	<script src="tables.lua" />
 	<script src="spawn_s.lua" />
+	<script src="position.lua" />
 </meta>

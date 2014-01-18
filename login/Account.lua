@@ -5,7 +5,7 @@ function getAccountAlive( sName, sPassword )
 	else
 		setElementData (client, "ClassicDM.Check", "notRegister")
 	end
-	triggerClientEvent ( "onPlayerRegister", getRootElement(), client )
+	triggerClientEvent ( "onPlayerRegister", client, client )
 end
 addEvent( "onGuiLogin", true )
 addEventHandler( "onGuiLogin", root, getAccountAlive )
