@@ -38,6 +38,7 @@ addEventHandler("onClientGUIClick", GUIEditor.button[1],
     function ()
         sLogin = guiGetText (GUIEditor.edit[1])
         sPassword = guiGetText (GUIEditor.edit[2])
+        setElementData (localPlayer, "ClassicDM.AccName", sLogin)
         triggerServerEvent ( "onGuiLogin", localPlayer, sLogin, sPassword )
     end, false
 )

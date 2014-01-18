@@ -12,4 +12,6 @@
 	
 	<script src="gunstore/store_cl.lua" type="client" />
 	<script src="gunstore/store_s.lua" type="server" />
+	
+	<script src="save/save_s.lua" type="server" />
 </meta>
