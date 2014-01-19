@@ -38,8 +38,27 @@ addEventHandler("onClientGUIClick", GUIEditor.button[1],
     function ()
         sLogin = guiGetText (GUIEditor.edit[1])
         sPassword = guiGetText (GUIEditor.edit[2])
-        setElementData (localPlayer, "ClassicDM.AccName", sLogin)
+        if string.len (sPassword) >= 3 then
+            setElementData (localPlayer, "ClassicDM.AccName", sLogin)
+            triggerServerEvent ( "onGuiLogin", localPlayer, sLogin, sPassword )
+        else
+            outputChatBox ( "short password" )
+        end
+    end, false
+)
+
+addEventHandler("onClientGUIClick", RegisterInfo.button[2],
+    function ()
+        triggerServerEvent ( "onGuiRegistration", localPlayer, sLogin, sPassword )
         triggerServerEvent ( "onGuiLogin", localPlayer, sLogin, sPassword )
+        guiSetVisible (RegisterInfo.window[1], false)
+        showCursor (false)
+    end, false
+)
+
+addEventHandler("onClientGUIClick", RegisterInfo.button[1],
+    function ()
+        guiSetVisible (RegisterInfo.window[1], false)
     end, false
 )
 
@@ -52,6 +71,8 @@ function( player )
     elseif getElementData ( localPlayer, "ClassicDM.Check" ) == false then
         outputChatBox ("Incorrect Passwrod")
     elseif getElementData ( localPlayer, "ClassicDM.Check" ) == "notRegister" then
-        triggerServerEvent ( "onGuiRegistration", localPlayer, sLogin, sPassword )
+        guiSetVisible (RegisterInfo.window[1], true)
+        guiMoveToBack( GUIEditor.window[1] )
+        --triggerServerEvent ( "onGuiRegistration", localPlayer, sLogin, sPassword )
     end 
 end )

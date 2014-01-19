@@ -3,7 +3,7 @@ function playerBuyWapon ( gunID )
     	takePlayerMoney ( client, g_Weapon[gunID] )
     	giveWeapon ( client, gunID )
 	else
-		outputChatBox ( "Количество денег", client )
+		outputChatBox ( "You don't have enough money", client )
 	end
 end
 addEvent( "onPlayerBuyWeapon", true )

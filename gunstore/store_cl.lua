@@ -31,6 +31,7 @@ addEventHandler("onClientGUIClick", g_Store.gridlist[1],
 
 addEventHandler("onClientGUIClick", g_Store.button[1],
     function ()
+        toggleAllControls ( true )
     	guiSetVisible (g_Store.window[1], false)
     	showCursor (false)
     end, false
@@ -39,12 +40,14 @@ addEventHandler("onClientGUIClick", g_Store.button[1],
 addEventHandler("onClientGUIClick", g_Store.button[2],
     function ()
     	triggerServerEvent ( "onPlayerBuyWeapon", localPlayer, ClickGunId ) 
+        toggleAllControls ( true )
     	guiSetVisible (g_Store.window[1], false)
     	showCursor (false)
     end, false
 )
 
 function showMarkers(  )
+    toggleAllControls ( false )
  	guiSetVisible (g_Store.window[1], true)
  	showCursor (true)
 end
