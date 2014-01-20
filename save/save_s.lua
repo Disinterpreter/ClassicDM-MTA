@@ -20,6 +20,7 @@ addEventHandler ( "onPlayerLogin", root,
 	function ()
 		local acc = getAccount (getElementData (source, "ClassicDM.AccName"))
 		if getAccountData (acc, "ClassicDM.playerweapon1") then
+			setPlayerTeam ( source, getTeamFromName (  getAccountData ( acc, "ClassicDM.MyTeam" ) ) )
 			setElementHealth ( source, getAccountData ( acc, "ClassicDM.playerHealth" ) )
 			for i = 0,12 do
 				giveWeapon ( source, getAccountData ( acc, "ClassicDM.playerweapon"..i), getAccountData ( acc, "ClassicDM.playerweaponAmmo"..i) ) 
