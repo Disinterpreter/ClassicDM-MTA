@@ -1,3 +1,10 @@
+--
+--The MIT License (MIT)
+--Copyright (c) 2014 CoolDark
+--
+--See LICENSE file
+--
+
 function playerBuyWapon ( gunID )
 	if getPlayerMoney ( client ) >= tonumber (g_Weapon[gunID]) then
     	takePlayerMoney ( client, g_Weapon[gunID] )

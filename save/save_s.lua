@@ -1,3 +1,10 @@
+--
+--The MIT License (MIT)
+--Copyright (c) 2014 CoolDark
+--
+--See LICENSE file
+--
+
 addEventHandler ( "onPlayerQuit", root, 
 	function ()
 		local acc = getAccount (getElementData (source, "ClassicDM.AccName"))

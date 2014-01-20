@@ -1,3 +1,10 @@
+--
+--The MIT License (MIT)
+--Copyright (c) 2014 CoolDark
+--
+--See LICENSE file
+--
+
 g_Store = {
     gridlist = {},
     window = {},

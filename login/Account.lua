@@ -1,3 +1,10 @@
+--
+--The MIT License (MIT)
+--Copyright (c) 2014 CoolDark
+--
+--See LICENSE file
+--
+
 function getAccountAlive( sName, sPassword )
 	if type ( getAccount ( sName ) ) == "userdata" then
 		local logInAcc = logIn ( client, getAccount ( sName ), sPassword )

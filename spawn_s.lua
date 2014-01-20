@@ -1,3 +1,10 @@
+--
+--The MIT License (MIT)
+--Copyright (c) 2014 CoolDark
+--
+--See LICENSE file
+--
+
 addEventHandler ("onPlayerLogin", root, 
 	function ()
 		fadeCamera(source, true)
