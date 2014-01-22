@@ -7,7 +7,7 @@
 
 addEventHandler ( "onPlayerQuit", root, 
 	function ()
-		local acc = getAccount (getElementData (source, "ClassicDM.AccName"))
+		local acc = getPlayerAccount( source )
 		setAccountData ( acc, "ClassicDM.playerHealth", getElementHealth ( source ) )
 		for i = 0,12 do
 			setAccountData ( acc, "ClassicDM.playerweapon"..i, getPedWeapon (source, i) )
@@ -18,13 +18,15 @@ addEventHandler ( "onPlayerQuit", root,
 
 addEventHandler ( "onPlayerLogin", root, 
 	function ()
-		local acc = getAccount (getElementData (source, "ClassicDM.AccName"))
+		local acc = getPlayerAccount( source )
 		if getAccountData (acc, "ClassicDM.playerweapon1") then
-			setPlayerTeam ( source, getTeamFromName (  getAccountData ( acc, "ClassicDM.MyTeam" ) ) )
-			setElementHealth ( source, getAccountData ( acc, "ClassicDM.playerHealth" ) )
 			for i = 0,12 do
 				giveWeapon ( source, getAccountData ( acc, "ClassicDM.playerweapon"..i), getAccountData ( acc, "ClassicDM.playerweaponAmmo"..i) ) 
 			end
+		end
+		if not getTeamFromName (  getAccountData ( acc, "ClassicDM.MyTeam" ) ) then
+			setPlayerTeam ( source, getTeamFromName (  getAccountData ( acc, "ClassicDM.MyTeam" ) ) )
+			setElementHealth ( source, getAccountData ( acc, "ClassicDM.playerHealth" ) )
 		end
 	end 
 )
