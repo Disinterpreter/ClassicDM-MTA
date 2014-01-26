@@ -19,6 +19,8 @@ addEventHandler( "onGuiLogin", root, getAccountAlive )
 
 function addAccoutnToGui ( sLogin, sPassword )
 	addAccount ( sLogin, sPassword )
+	setAccountData ( getAccount ( sLogin ), "ClassicDM.Money", 1000 )
+	setAccountData ( getAccount ( sLogin ), "ClassicDM.playerHealth", 100 )
 end
 addEvent( "onGuiRegistration", true )
 addEventHandler( "onGuiRegistration", root, addAccoutnToGui )
