@@ -46,17 +46,19 @@ addEventHandler("onClientGUIClick", g_Store.button[1],
 
 addEventHandler("onClientGUIClick", g_Store.button[2],
     function ()
-    	triggerServerEvent ( "onPlayerBuyWeapon", localPlayer, ClickGunId ) 
+        triggerServerEvent ( "onPlayerBuyWeapon", localPlayer, ClickGunId )
         toggleAllControls ( true )
-    	guiSetVisible (g_Store.window[1], false)
-    	showCursor (false)
+        guiSetVisible (g_Store.window[1], false)
+        showCursor (false)
     end, false
 )
 
-function showMarkers(  )
-    toggleAllControls ( false )
- 	guiSetVisible (g_Store.window[1], true)
- 	showCursor (true)
+function showMarkers( hitPlayer )
+    if hitPlayer == localPlayer then
+        toggleAllControls ( false )
+        guiSetVisible (g_Store.window[1], true)
+        showCursor (true)
+    end
 end
 for k,v in pairs ( g_WeaponMarker ) do
 	markers = createMarker(g_WeaponMarker[k][1], g_WeaponMarker[k][2], g_WeaponMarker[k][3] - 1, "cylinder", 2, 255, 0, 0)
