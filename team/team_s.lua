@@ -8,7 +8,7 @@
 function createBand ( pPlayer )
 	triggerClientEvent ( "onBandShow", pPlayer )
 end
-addCommandHandler ( "band", createBand )
+--addCommandHandler ( "band", createBand )
 
 function BandCreator ( teamName )
 	local acc = getAccount (getElementData (client, "ClassicDM.AccName"))
