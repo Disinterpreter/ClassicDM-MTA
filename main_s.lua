@@ -29,3 +29,14 @@ function OnPlayerJoin()
     --outputChatBox (getElementData(source, "ID"))
 end
 addEventHandler("onPlayerJoin", getRootElement(), OnPlayerJoin)
+
+addEventHandler ( "onPlayerWasted", root,
+	function ( ammo, killer, killerWeap )
+		if killer and getElementType(killer) == "player" and getElementType(source) == "player" then
+			takePlayerMoney ( source, 50 )
+			givePlayerMoney ( killer, 50 )
+			setTimer( spawnPlayer, 2000, 1, source, positions[iRandom][1], positions[iRandom][2], positions[iRandom][3] )
+		end
+		setTimer( spawnPlayer, 2000, 1, source, positions[iRandom][1], positions[iRandom][2], positions[iRandom][3] )
+	end
+)
