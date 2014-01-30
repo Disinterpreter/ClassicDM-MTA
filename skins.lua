@@ -1,0 +1,480 @@
+skins = {
+--"Special"
+		[1] = "Truth" ,
+		[2] = "Maccer" ,
+		[265] = "Tenpenny" ,
+		[266] = "Pulaski" ,
+		[267] = "Hern" ,
+		[268] = "Dwayne" ,
+		[269] = "Big Smoke" ,
+		[270] = "Sweet" ,
+		[271] = "Ryder" ,
+		[272] = "Forelli Guy" ,
+		[290] = "Rose" ,
+		[291] = "Kent Paul" ,
+		[292] = "Cesar" ,
+		[293] = "OG Loc" ,
+		[294] = "Wuzi Mu" ,
+		[295] = "Mike Toreno" ,
+		[296] = "Jizzy" ,
+		[297] = "Madd Dogg" ,
+		[298] = "Catalina" ,
+		[299] = "Claude" ,
+		[300] = "Ryder" ,
+		[301] = "Ryder Robber" ,
+		[302] = "Emmet" ,
+		[303] = "Andre" ,
+		[304] = "Kendl" ,
+		[305] = "Jethro" ,
+		[306] = "Zero" ,
+		[307] = "T-bone Mendez" ,
+		[308] = "Sindaco Guy" ,
+		[309] = "Janitor" ,
+		[310] = "Big Bear" ,
+		[311] = "Big Smoke Vest" ,
+		[312] = "Physco" ,
+
+--Beach
+		[18] = "Black Beachguy" ,
+		[45] = "Beach Mustache" ,
+		[92] = "Rollergirl" ,
+		[96] = "Soccer Player" ,
+		[97] = "Baywatch Dude" ,
+		[138] = "Bikini Tattoo" ,
+		[139] = "Yellow Bikini" ,
+		[140] = "Buxom Bikini" ,
+		[154] = "Beach Blonde" ,
+		[251] = "Lifeguard" ,
+		[252] = "Naked Freak" ,
+	
+--Casual Generics
+		[7] = "Casual Jeanjacket" ,
+		[10] = "Old Fat Lady" ,
+		[14] = "Floral Shirt" ,
+		[15] = "Plaid Baldy" ,
+		[20] = "Fresh Prince" ,
+		[23] = "Skater Kid" ,	
+		[32] = "Eyepatch" ,
+		[39] = "Old Maid" ,
+		[53] = "Golf Lady" ,
+		[54] = "Hispanic Woman" ,
+		[56] = "Legwarmers 1" ,
+		[58] = "Chinese Plaid" ,
+		[60] = "Chinese Casual" ,
+		[62] = "Pajama Man 1" ,
+		[69] = "Denim Girl" ,
+		[72] = "Bearded Hippie" ,
+		[88] = "Casual Old Lady" ,
+		[93] = "Hoop Earrings 1" ,
+		[101] = "Jacket Hippie" ,
+		[136] = "Old Rasta" ,
+		[142] = "African 1" ,
+		[143] = "Sam Jackson" ,
+		[170] = "PubeStache Tshirt" ,
+		[182] = "Pajama Man 2" ,
+		[184] = "Neckbeard" ,
+		[188] = "Green Shirt" ,
+		[215] = "Explorer" ,
+		[217] = "Staff Guy" ,
+		[218] = "Old Woman" ,
+		[220] = "African 2" ,
+		[221] = "Beardo Casual" ,
+		[222] = "Beardo Clubbing" ,
+		[224] = "Elderly Asian 1" ,
+		[225] = "Elderly Asian 2" ,
+		[226] = "Legwarmers 2" ,
+		[229] = "Asian Tourist" ,
+		[231] = "Grannie" ,
+		[232] = "Grouchy lady" ,
+		[233] = "Hoop Earrings 2" ,
+		[234] = "Buzzcut" ,
+		[236] = "Happy Old Man" ,
+		[250] = "Green Tshirt" ,
+		[262] = "Pajama Man 2 b" ,
+		
+--Celebrities	
+		[20] = "Fresh Prince" ,
+		[91] = "Sharon Stone" ,
+		[143] = "Sam Jackson" ,
+		[147] = "Sigmund Freud" ,
+		[240] = "Hugh Grant" ,
+		[251] = "Lifeguard" ,
+		[258] = "Joe Pesci" ,
+		[259] = "Chris Penn" ,
+	
+--Country
+		[31] = "Fat Cowgirl" ,
+		[33] = "Bounty Hunter" ,
+		[34] = "Marlboro Man" ,
+		[44] = "Tatooed Plaid" ,
+		[128] = "Native Rancher" ,
+		[129] = "Native Librarian" ,
+		[130] = "Native Ugly" ,
+		[131] = "Native Sexy" ,
+		[132] = "Native Geezer" ,
+		[133] = "Furys Trucker" ,
+		[157] = "Farmer Girl" ,
+		[158] = "Farmer" ,
+		[159] = "Farmer Redneck" ,
+		[160] = "Bald Redneck" ,
+		[161] = "Smoking Cowboy" ,
+		[162] = "Inbred" ,
+		[196] = "Aunt May" ,
+		[197] = "Smoking Maid" ,
+		[198] = "Ranch Cowgirl" ,
+		[199] = "Heidi" ,
+		[200] = "Hairy Redneck" ,
+		[201] = "Trucker Girl" ,
+		[202] = "Beer Trucker" ,
+		[236] = "Happy Old Man" ,
+		[261] = "Southerner" ,
+	
+--Duplicates
+		[25] = "Varsity jacket" ,
+		[66] = "Varsity Bandits" ,
+		[56] = "Legwarmers 1" ,
+		[226] = "Legwarmers 2" ,
+		[221] = "Beardo Casual" ,
+		[222] = "Beardo Clubbing" ,
+		[247] = "Biker Vest" ,
+		[254] = "Biker Vest b" ,
+	
+--Emergency Workers
+	--Authorities
+			[71] = "Security Guard" ,
+			[163] = "Casino Bouncer 1" ,
+			[164] = "Casino Bouncer 2" ,
+			[165] = "Agent Kay" ,
+			[166] = "Agent Jay" ,
+
+	--Firemen
+			[277] = "Fireman LS" ,
+			[278] = "Fireman LV" ,
+			[279] = "Fireman SF" ,
+
+	--Medics
+			[274] = "Medic 1" ,
+			[275] = "Medic 2" ,
+			[276] = "Medic 3" ,
+
+	--Military
+			[73] = "Flag Bandana" ,
+			[179] = "War Vet" ,
+			[287] = "Army" ,
+
+	--Police
+			[190] = "Barbara Schternvart" ,
+			[246] = "Cop Stripper" ,
+			[280] = "Cop 1" ,
+			[281] = "Cop 2" ,
+			[282] = "Cop 3" ,
+			[283] = "Cop 4" ,
+			[284] = "Cop 5" ,
+			[285] = "SWAT" ,
+			[286] = "FBI" ,
+			[288] = "Cop 6" ,
+
+	
+--Fatties
+		[10] = "Old Fat Lady" ,
+		[31] = "Fat Cowgirl" ,
+		[38] = "Old Golf Lady" ,
+		[39] = "Old Maid" ,
+		[53] = "Golf Lady" ,
+		[54] = "Hispanic Woman" ,
+		[88] = "Casual Old Lady" ,
+		[89] = "Cleaning Lady" ,
+		[103] = "Baller Jacket" ,
+		[103] = "Baller Jacket" ,
+		[105] = "Grove Sweater" ,
+		[130] = "Native Ugly" ,
+		[151] = "Melanie" ,
+		[182] = "Pajama Man 2" ,
+		[197] = "Smoking Maid" ,
+		[199] = "Heidi" ,
+		[207] = "Grove Booty" ,
+		[218] = "Old Woman" ,
+		[231] = "Grannie" ,
+		[232] = "Grouchy lady" ,
+		[245] = "Ghetto Ho" ,
+		[258] = "Joe Pesci" ,
+		[259] = "Chris Penn" ,
+	
+--Formal Generics
+		[9] = "Business Lady" ,
+		[17] = "Black suit" ,
+		[57] = "Chinese Businessman" ,
+		[61] = "Pilot" ,
+		[76] = "Businesswoman 1" ,
+		[141] = "Cute Librarian" ,
+		[147] = "Sigmund Freud" ,
+		[148] = "Businesswoman 2" ,
+		[149] = "Businesswoman 2 b" ,
+		[150] = "Businesswoman 3" ,
+		[169] = "Asian Escort " ,
+		[186] = "Teacher" ,
+		[187] = "Japanese Businessman 1" ,
+		[219] = "Lady In Red" ,
+		[227] = "Japanese Businessman 2" ,
+		[228] = "Japanese Businessman 3" ,
+		[255] = "Limo Driver" ,
+		[263] = "Asian Hostess" ,
+	
+--Fighters
+		[49] = "Ninja Sensei" ,
+		[80] = "Red Boxer" ,
+		[81] = "Blue Boxer" ,
+		[180] = "Bball Player" ,
+		[203] = "Ninja 1" ,
+		[204] = "Ninja 2" ,
+	
+--Gangs
+	--Aztecas
+			[114] = "Aztecas Stripes" ,
+			[115] = "Aztecas Jacket" ,
+			[116] = "Aztecas Shorts" ,
+
+	--Ballas
+			[13] = "Homegirl" ,
+			[102] = "Baller Shirt" ,
+			[103] = "Baller Jacket" ,
+			[104] = "Baller Sweater" ,
+
+	--Bikers
+			[100] = "Biker Blackshirt" ,
+			[247] = "Biker Vest" ,
+			[248] = "Biker Headband" ,
+			[254] = "Biker Vest b" ,
+
+	--Da Nang
+			[121] = "Da Nang Army" ,
+			[122] = "Da Nang Bandana" ,
+			[123] = "Da Nang Shades" ,
+
+	--Grove
+			[0] = "CJ" ,
+			[105] = "Grove Sweater" ,
+			[106] = "Grove Topbutton" ,
+			[107] = "Grove Jersey" ,
+			[207] = "Grove Booty" ,
+
+	--Mafia
+			[125] = "Mafia Enforcer" ,
+			[126] = "Mafia Wiseguy" ,
+			[127] = "Mafia Hitman" ,
+
+	--Rifa
+			[173] = "Rifa Hat" ,
+			[174] = "Rifa Vest" ,
+			[175] = "Rifa Suspenders" ,
+
+	--Russians
+			[111] = "Russian Muscle" ,
+			[112] = "Russian Hitman" ,
+			[113] = "Russian Boss" ,
+
+	--Sindacco
+			[120] = "Sindacco Suit" ,
+			[124] = "Sindacco Muscle" ,
+
+	--Triad
+			[117] = "Triad 1" ,
+			[118] = "Triad 2" ,
+			[119] = "Triad 3" ,
+
+	--Vagos
+			[108] = "Vagos Topless" ,
+			[109] = "Vagos Pants" ,
+			[110] = "Vagos Shorts" ,
+
+	
+--Gangstas
+		[19] = "Beach Gangsta" ,
+		[21] = "Striped Gangsta" ,
+		[22] = "Orange Sportsman" ,
+		[28] = "Black Dealer" ,
+		[29] = "White Dealer" ,
+		[30] = "Religious Essey" ,
+		[47] = "Top Button Essey" ,
+		[67] = "Red Bandana" ,
+		[143] = "Sam Jackson" ,
+		[241] = "Afro Brother" ,
+		[242] = "Dreadlock Brother" ,
+		[243] = "Ghetto Booty" ,
+	
+--Girlfriends
+		[190] = "Barbara Schternvart" ,
+		[191] = "Helena Wankstein" ,
+		[192] = "Michelle Cannes" ,
+		[193] = "Katie Zhan" ,
+		[194] = "Millie Perkins" ,
+		[195] = "Denise Robinson" ,
+	
+--Homeless
+		[77] = "Bag Lady" ,
+		[78] = "Homeless Scarf" ,
+		[79] = "Fat Homeless" ,
+		[95] = "Poor Old Man" ,
+		[134] = "Homeless Smoker" ,
+		[135] = "Skullcap Hobo" ,
+		[137] = "Boxhead" ,
+		[200] = "Hairy Redneck" ,
+		[212] = "Tin Foil Hat" ,
+		[213] = "Hobo Elvis" ,
+		[230] = "Hooded Hobo" ,
+	
+--Nightclubbers
+		[43] = "Porn Producer" ,
+		[46] = "Dark Romeo" ,
+		[59] = "Chinese Romeo" ,
+		[185] = "Nervous Guy" ,
+		[223] = "Greasy Nightclubber" ,
+		[240] = "Hugh Grant" ,
+	
+--Sex Industry
+		[43] = "Porn Producer" ,
+		[63] = "Trashy Hooker" ,
+		[64] = "Transvestite" ,
+		[75] = "Skanky Hooker" ,
+		[85] = "Furcoat Hooker" ,
+		[87] = "Firecrotch" ,
+
+		[90] = "Barely Covered" ,
+		[152] = "Schoolgirl 1" ,
+		[178] = "Masked Stripper" ,
+		[237] = "Leopard Hooker" ,
+		[238] = "Amazon" ,
+		[244] = "Lace Stripper" ,
+		[245] = "Ghetto Ho" ,
+		[246] = "Cop Stripper" ,
+		[249] = "Pimp" ,
+		[256] = "Shoolgirl 2" ,
+		[257] = "Bondage Girl" ,
+	
+--Sports
+		[13] = "Homegirl" ,
+		[21] = "Striped Gangsta" ,
+		[22] = "Orange Sportsman" ,
+		[23] = "Skater Kid" ,
+		[24] = "LS Coach" ,
+		[25] = "Varsity jacket" ,
+		[36] = "Mailman" ,
+		[51] = "Black Bicyclist" ,
+		[52] = "White Bicyclist" ,
+		[53] = "Golf Lady" ,
+		[66] = "Varsity Bandits" ,
+		[80] = "Red Boxer" ,
+		[81] = "Blue Boxer" ,
+		[92] = "Rollergirl" ,
+		[94] = "Andy Capp" ,
+		[96] = "Soccer Player" ,
+		[99] = "Rollerguy" ,
+		[180] = "Bball Player" ,
+		[195] = "Denise Robinson" ,
+	
+--Tough Guys
+		[0] = "CJ" ,
+		[18] = "Black Beachguy" ,
+		[28] = "Black Dealer" ,
+		[30] = "Religious Essey" ,
+		[33] = "Bounty Hunter" ,
+		[183] = "Klingon" ,
+	
+--Tourists
+		[26] = "Hiker" ,
+		[35] = "Fisherman" ,
+		[37] = "Baseball Dad" ,
+		[38] = "Old Golf Lady" ,
+		[210] = "Sloppy Tourist" ,
+		[235] = "Retired Tourist" ,
+	
+--Wealthy
+		[12] = "Classy Gold Hooker" ,
+		[40] = "Classy Dark Hooker" ,
+		[41] = "Tracksuit Girl" ,
+		[55] = "Rich Bitch" ,
+		[91] = "Sharon Stone" ,
+		[99] = "Rollerguy" ,
+		[216] = "Turtleneck" ,
+		[240] = "Hugh Grant" ,
+	
+--Weirdos
+		[75] = "Skanky Hooker" ,
+		[137] = "Boxhead" ,
+		[151] = "Melanie" ,
+		[167] = "Chicken" ,
+		[181] = "Punk" ,
+		[212] = "Tin Foil Hat" ,
+		[213] = "Hobo Elvis" ,
+		[230] = "Hooded Hobo" ,
+		[241] = "Afro Brother" ,
+		[242] = "Dreadlock Brother" ,
+		[252] = "Naked Freak" ,
+		[264] = "Whoopee the Clown" ,
+	
+--Workers
+		--Barbers
+			[156] = "Old Reece" ,
+			[176] = "Style Barber" ,
+			[177] = "Vanilla Ice Barber" ,
+
+	--Career Workers
+			[61] = "Pilot" ,
+			[68] = "Preist" ,
+			[70] = "Scientist" ,
+			[147] = "Sigmund Freud" ,
+
+	--Casino Workers
+			[11] = "Card Dealer 1" ,
+			[82] = "Fatty Elvis" ,
+			[83] = "Whitesuit Elvis" ,
+			[84] = "Bluesuit Elvis" ,
+			[163] = "Casino Bouncer 1" ,
+			[164] = "Casino Bouncer 2" ,
+			[169] = "Asian Escort " ,
+			[171] = "Card Dealer 2" ,
+			[172] = "Card Dealer 3" ,
+			[189] = "Valet" ,
+			[213] = "Hobo Elvis" ,
+			[214] = "Caligula Waitress" ,
+
+	--Construction Workers
+			[16] = "Earmuff Worker" ,
+			[27] = "Construction 1" ,
+			[153] = "Foreman" ,
+			[260] = "Construction 2" ,
+
+	--Drug Workers
+			[28] = "Black Dealer" ,
+			[29] = "White Dealer" ,
+			[144] = "Drug Worker 1" ,
+			[145] = "Drug Worker 2" ,
+			[146] = "Drug Worker 3" ,
+
+	--Food Workers
+			[155] = "Pizza Guy" ,
+			[167] = "Chicken" ,
+			[168] = "Hotdog Vender" ,
+			[205] = "Burger Girl" ,
+			[209] = "Noodle Vender" ,
+			[264] = "Whoopee the Clown" ,
+
+	--Other Workers
+			[36] = "Mailman" ,
+			[50] = "Mechanic" ,
+			[71] = "Security Guard" ,
+			[189] = "Valet" ,
+			[211] = "Staff Girl" ,
+			[217] = "Staff Guy" ,
+			[251] = "Lifeguard" ,
+			[253] = "Bus Driver" ,
+			[255] = "Limo Driver" ,
+
+	--Truckers
+			[128] = "Native Rancher" ,
+			[133] = "Furys Trucker" ,
+			[201] = "Trucker Girl" ,
+			[202] = "Beer Trucker" ,
+			[206] = "Money Trucker"  
+}
+

@@ -21,6 +21,7 @@ function addAccoutnToGui ( sLogin, sPassword )
 	addAccount ( sLogin, sPassword )
 	setElementData ( client, "ClassicDM.RegisterInfo", 1 )
 	givePlayerMoney ( client, 1000 )
+	setAccountData ( getAccount ( sLogin ), "ClassicDM.PlayerSkin", 50 )
 	setAccountData ( getAccount ( sLogin ), "ClassicDM.Money", 1000 )
 	setAccountData ( getAccount ( sLogin ), "ClassicDM.playerHealth", 100 )
 end

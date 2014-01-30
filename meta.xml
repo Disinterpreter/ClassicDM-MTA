@@ -2,7 +2,9 @@
 	<script src="main_s.lua" />
 	<script src="main_cl.lua" type="client" />
 	
+	<script src="tools/skinFucts.lua" type="shared" />
 	<script src="tables.lua" type="shared" />
+	<script src="skins.lua" type="shared" />
 	
 	<script src="login/Account.lua" />
 	<script src="login/GUILogin_cl.lua" type="client" />
@@ -19,5 +21,4 @@
 	<script src="command/player_s.lua" type="server" />
 	
 	<script src="save/save_s.lua" type="server" />
-	<config src="skins.xml" type="client" />
 </meta>

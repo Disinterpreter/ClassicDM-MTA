@@ -8,6 +8,7 @@
 addEventHandler ( "onPlayerQuit", root, 
 	function ()
 		local acc = getPlayerAccount( source )
+		setAccountData ( acc, "ClassicDM.PlayerSkin", getElementModel ( source ) )
 		setAccountData ( acc, "ClassicDM.playerHealth", getElementHealth ( source ) )
 		setAccountData ( acc, "ClassicDM.Money", getPlayerMoney ( source ) )
 		for i = 0,12 do
@@ -21,8 +22,9 @@ addEventHandler ( "onPlayerLogin", root,
 	function ()
 		local acc = getPlayerAccount( source )
 		if getElementData ( source, "ClassicDM.RegisterInfo" ) == 1 then
-				return true
+			setElementModel (source, getAccountData (acc, "ClassicDM.PlayerSkin") )
 		else
+			setElementModel ( source, getAccountData (acc, "ClassicDM.PlayerSkin") )
 			givePlayerMoney ( source, getAccountData ( acc, "ClassicDM.Money" ) )
 			setElementHealth ( source, getAccountData ( acc, "ClassicDM.playerHealth" ) )
 			for i = 0,12 do
