@@ -47,9 +47,10 @@ addEventHandler("onClientGUIClick", g_Store.button[1],
 addEventHandler("onClientGUIClick", g_Store.button[2],
     function ()
         triggerServerEvent ( "onPlayerBuyWeapon", localPlayer, ClickGunId )
-        toggleAllControls ( true )
-        guiSetVisible (g_Store.window[1], false)
-        showCursor (false)
+        setPedWeaponSlot ( localPlayer, getSlotFromWeapon ( ClickGunId ) )
+        --toggleAllControls ( true )
+        --guiSetVisible (g_Store.window[1], false)
+        --showCursor (false)
     end, false
 )
 
