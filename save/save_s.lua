@@ -40,7 +40,7 @@ addEventHandler ( "onPlayerLogin", root,
 			setElementHealth ( source, getAccountData ( acc, "ClassicDM.playerHealth" ) )
 			weapons = getAccountData ( acc, "ClassicDM.Weapons" )
 			ammo = getAccountData ( acc, "ClassicDM.Ammo" )
-			outputChatBox ( tostring (ammo) )
+			--outputChatBox ( tostring (ammo) )
 			for k,v in pairs ( fromJSON (weapons) ) do
 				giveWeapon ( source, tonumber ( v ) ) 
 			end	
@@ -56,11 +56,3 @@ addEventHandler ( "onPlayerLogin", root,
 		end
 	end 
 )
-
-function userWeap( pPlayer )
-	outputChatBox ( myjsno )
-	for k,v in pairs ( fromJSON (myjsno) ) do
-		outputChatBox ( v.ammo )
-	end
-end
-addCommandHandler ("guns", userWeap)
