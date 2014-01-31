@@ -40,3 +40,9 @@ addEventHandler ( "onPlayerWasted", root,
 		setTimer( spawnPlayer, 2000, 1, source, positions[iRandom][1], positions[iRandom][2], positions[iRandom][3] )
 	end
 )
+
+addEventHandler ( "onPlayerSpawn", root,
+	function ()
+		setElementModel ( source, getAccountData (getPlayerAccount (source), "ClassicDM.PlayerSkin") )
+	end
+)
