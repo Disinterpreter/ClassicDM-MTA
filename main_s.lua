@@ -53,8 +53,8 @@ addEventHandler ( "onPlayerWasted", root,
             -- killer death
             accKiller = getPlayerAccount ( killer )
             setAccountData ( accKiller, "ClassicDM.Death", tostring ( tonumber (getAccountData (accKiller, ClassicDM.Death) +1 ) ) )
-            kdArray = { getAccountData(accKiller, "ClassicDM.Kills"), getAccountData(accKiller, "ClassicDM.Death") }
-            setElementData ( killer, "kd", kdArray[1] .."/".. kdArray[2] )
+            kdArrayKiller = { getAccountData(accKiller, "ClassicDM.Kills"), getAccountData(accKiller, "ClassicDM.Death") }
+            setElementData ( killer, "kd", kdArrayKiller[1] .."/".. kdArrayKiller[2] )
         end
         acc = getPlayerAccount ( source )
         setAccountData ( acc, "ClassicDM.Death", tostring ( tonumber (getAccountData (acc, "ClassicDM.Death") -1 ) ) )
