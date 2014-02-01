@@ -37,9 +37,10 @@ addEventHandler ( "onPlayerWasted", root,
 			takePlayerMoney ( source, 50 )
 			givePlayerMoney ( killer, 50 )
 			setTimer( spawnPlayer, 4000, 1, source, positions[iRandom][1], positions[iRandom][2], positions[iRandom][3] )
-		end
-		setTimer( spawnPlayer, 4000, 1, source, positions[iRandom][1], positions[iRandom][2], positions[iRandom][3] )
-	end
+		else
+            setTimer( spawnPlayer, 4000, 1, source, positions[iRandom][1], positions[iRandom][2], positions[iRandom][3] )
+        end
+    end
 )
 
 addEventHandler ( "onPlayerWasted", root,
@@ -48,17 +49,18 @@ addEventHandler ( "onPlayerWasted", root,
             -- source death
             acc = getPlayerAccount ( source )
             setAccountData ( acc, "ClassicDM.Death", tostring ( tonumber (getAccountData (acc, "ClassicDM.Death") +1 ) ) )
-            kdArray = { getAccountData(acc, "ClassicDM.Kills"), getAccountData(acc, "ClassicDM.Death") }
+            local kdArray = { getAccountData(acc, "ClassicDM.Kills"), getAccountData(acc, "ClassicDM.Death") }
             setElementData ( source, "kd", kdArray[1] .."/".. kdArray[2] )
             -- killer death
             accKiller = getPlayerAccount ( killer )
             setAccountData ( accKiller, "ClassicDM.Kills", tostring ( tonumber (getAccountData (accKiller, "ClassicDM.Kills") +1 ) ) )
-            kdArrayKiller = { getAccountData(accKiller, "ClassicDM.Kills"), getAccountData(accKiller, "ClassicDM.Death") }
+            local kdArrayKiller = { getAccountData(accKiller, "ClassicDM.Kills"), getAccountData(accKiller, "ClassicDM.Death") }
             setElementData ( killer, "kd", kdArrayKiller[1] .."/".. kdArrayKiller[2] )
+        else
+            acc = getPlayerAccount ( source )
+            setAccountData ( acc, "ClassicDM.Death", tostring ( tonumber (getAccountData (acc, "ClassicDM.Death") +1 ) ) )
+            local kdArray = { getAccountData(acc, "ClassicDM.Kills"),getAccountData(acc, "ClassicDM.Death") }
+            setElementData ( source, "kd", kdArray[1] .."/".. kdArray[2] )
         end
-        acc = getPlayerAccount ( source )
-        setAccountData ( acc, "ClassicDM.Death", tostring ( tonumber (getAccountData (acc, "ClassicDM.Death") +1 ) ) )
-        kdArray = { getAccountData(acc, "ClassicDM.Kills"),getAccountData(acc, "ClassicDM.Death") }
-        setElementData ( source, "kd", kdArray[1] .."/".. kdArray[2] )
     end
 )
