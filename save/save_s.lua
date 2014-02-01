@@ -34,7 +34,11 @@ addEventHandler ( "onPlayerLogin", root,
 		local acc = getPlayerAccount( source )
 		if getElementData ( source, "ClassicDM.RegisterInfo" ) == 1 then
 			setElementModel (source, getAccountData (acc, "ClassicDM.PlayerSkin") )
+			setAccountData ( acc, "ClassicDM.Kills", tostring (0) )
+			setAccountData ( acc, "ClassicDM.Death", tostring (0) )
 		else
+			kdArray = { getAccountData(acc, "ClassicDM.Kills"),getAccountData(acc, "ClassicDM.Death") }
+			setElementData ( source, "kd", kdArray[1] .."/".. kdArray[2] )
 			setElementModel ( source, getAccountData (acc, "ClassicDM.PlayerSkin") )
 			givePlayerMoney ( source, getAccountData ( acc, "ClassicDM.Money" ) )
 			setElementHealth ( source, getAccountData ( acc, "ClassicDM.playerHealth" ) )

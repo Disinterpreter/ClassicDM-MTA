@@ -19,3 +19,9 @@ addEventHandler ("onPlayerLogout", root,
 		fadeCamera(source, false)
 	end
 )
+
+addEventHandler ( "onPlayerSpawn", root,
+	function ()
+		setElementModel ( source, getAccountData (getPlayerAccount (source), "ClassicDM.PlayerSkin") )
+	end
+)
