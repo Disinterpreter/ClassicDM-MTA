@@ -17,6 +17,7 @@ SkinShop = {
 --SkinShop.button[1] - Buy
 --SkinShop.button[2] - cancel
 --
+
 SkinShop.window[1] = guiCreateWindow(932, 279, 300, 416, "Skin shop", false)
 guiWindowSetSizable(SkinShop.window[1], false)
 SkinShop.gridlist[1] = guiCreateGridList(12, 30, 278, 313, false, SkinShop.window[1])
@@ -67,12 +68,14 @@ addEventHandler("onClientGUIClick", SkinShop.button[2],
 -- Event Marker
 function showSkinShop( hitPlayer )
     if hitPlayer == localPlayer then
-    	eventMarker = source
-    	setElementAlpha ( eventMarker, 0 )
-    	oldSkin = getElementModel (localPlayer)
-        toggleAllControls ( false )
-        guiSetVisible (SkinShop.window[1], true)
-        showCursor (true)
+        if not isPedInVehicle (hitPlayer) then
+        	eventMarker = source
+        	setElementAlpha ( eventMarker, 0 )
+        	oldSkin = getElementModel (localPlayer)
+            toggleAllControls ( false )
+            guiSetVisible (SkinShop.window[1], true)
+            showCursor (true)
+        end
     end
 end
 

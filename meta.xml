@@ -12,6 +12,8 @@
 	<script src="spawn_s.lua" />
 	<script src="position.lua" />
 	
+	<script src="blip/blip_cl.lua" type="client" />
+	
 	<script src="gunstore/store_cl.lua" type="client" />
 	<script src="gunstore/store_s.lua" type="server" />
 	

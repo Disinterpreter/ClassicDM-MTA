@@ -36,6 +36,8 @@ addEventHandler ( "onPlayerLogin", root,
 			setElementModel (source, getAccountData (acc, "ClassicDM.PlayerSkin") )
 			setAccountData ( acc, "ClassicDM.Kills", tostring (0) )
 			setAccountData ( acc, "ClassicDM.Death", tostring (0) )
+			kdArray = { getAccountData(acc, "ClassicDM.Kills"),getAccountData(acc, "ClassicDM.Death") }
+			setElementData ( source, "kd", kdArray[1] .."/".. kdArray[2] )
 		else
 			kdArray = { getAccountData(acc, "ClassicDM.Kills"),getAccountData(acc, "ClassicDM.Death") }
 			setElementData ( source, "kd", kdArray[1] .."/".. kdArray[2] )

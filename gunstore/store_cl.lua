@@ -11,6 +11,13 @@ g_Store = {
     button = {}
 }
 
+--
+--Some important vars:
+--g_Store.gridlist[1] - gridlist
+--g_Store.button[1] - exit
+--g_Store.button[2] - Buy
+--
+
 g_Store.window[1] = guiCreateWindow(475, 300, 402, 383, "", false)
 guiWindowSetSizable(g_Store.window[1], false)
 
@@ -23,12 +30,14 @@ g_Store.button[2] = guiCreateButton(296, 287, 96, 38, "Buy", false, g_Store.wind
 guiSetProperty(g_Store.button[2], "NormalTextColour", "FFAAAAAA")
 guiSetVisible (g_Store.window[1], false)
 
+-- Gridlist
 for k,v in pairs ( g_Weapon ) do
 	local row = guiGridListAddRow (g_Store.gridlist[1])
 	guiGridListSetItemText ( g_Store.gridlist[1], row, NameColoumn, getWeaponNameFromID (k), false, false )
 	guiGridListSetItemText ( g_Store.gridlist[1], row, PriceColoumn, tonumber (v), false, false )
 end
 
+-- Gridlist click
 addEventHandler("onClientGUIClick", g_Store.gridlist[1],
     function ()
     	local ClickedWeaponName = guiGridListGetItemText ( g_Store.gridlist[1], guiGridListGetSelectedItem ( g_Store.gridlist[1] ), 1 )
@@ -36,6 +45,7 @@ addEventHandler("onClientGUIClick", g_Store.gridlist[1],
     end, false
 )
 
+-- Exit button
 addEventHandler("onClientGUIClick", g_Store.button[1],
     function ()
         toggleAllControls ( true )
@@ -44,23 +54,31 @@ addEventHandler("onClientGUIClick", g_Store.button[1],
     end, false
 )
 
+-- Buy button
 addEventHandler("onClientGUIClick", g_Store.button[2],
     function ()
-        triggerServerEvent ( "onPlayerBuyWeapon", localPlayer, ClickGunId )
-        setPedWeaponSlot ( localPlayer, getSlotFromWeapon ( ClickGunId ) )
-        --toggleAllControls ( true )
-        --guiSetVisible (g_Store.window[1], false)
-        --showCursor (false)
+        if ClickGunId then
+            triggerServerEvent ( "onPlayerBuyWeapon", localPlayer, ClickGunId ) 
+            setPedWeaponSlot ( localPlayer, getSlotFromWeapon ( ClickGunId ) )
+            --toggleAllControls ( true )
+            --guiSetVisible (g_Store.window[1], false)
+            --showCursor (false)
+        end
     end, false
 )
 
+-- Event Marker
 function showMarkers( hitPlayer )
     if hitPlayer == localPlayer then
-        toggleAllControls ( false )
-        guiSetVisible (g_Store.window[1], true)
-        showCursor (true)
+        if not isPedInVehicle (hitPlayer) then
+            toggleAllControls ( false )
+            guiSetVisible (g_Store.window[1], true)
+            showCursor (true)
+        end
     end
 end
+
+--Сycle
 for k,v in pairs ( g_WeaponMarker ) do
 	markers = createMarker(g_WeaponMarker[k][1], g_WeaponMarker[k][2], g_WeaponMarker[k][3] - 1, "cylinder", 2, 255, 0, 0)
 	addEventHandler ( "onClientMarkerHit", markers, showMarkers )
