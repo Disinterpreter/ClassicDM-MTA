@@ -17,6 +17,17 @@ GUIEditor = {
     label = {},
     edit = {}
 }
+
+--
+--Some important vars:
+--GUIEditor.edit[1]  - editor nickname
+--GUIEditor.edit[2] - editor password
+--GUIEditor.button[1] - button Login
+--RegisterInfo.button[1] - cancel Register
+--RegisterInfo.button[2] - button Register
+--
+
+----------Register and login GUI------
 GUIEditor.window[1] = guiCreateWindow(446, 365, 317, 264, "", false)
 guiWindowSetSizable(GUIEditor.window[1], false)
 
@@ -38,9 +49,12 @@ RegisterInfo.button[2] = guiCreateButton(316, 119, 100, 34, "Yes", false, Regist
 guiSetProperty(RegisterInfo.button[2], "NormalTextColour", "FFAAAAAA")
 RegisterInfo.button[1] = guiCreateButton(23, 119, 100, 34, "No", false, RegisterInfo.window[1])
 guiSetProperty(RegisterInfo.button[1], "NormalTextColour", "FFAAAAAA")
+--------------------------------------
+
 showCursor (true)
 guiSetVisible (RegisterInfo.window[1], false)
 
+-- Login callback
 addEventHandler("onClientGUIClick", GUIEditor.button[1],
     function ()
         sLogin = guiGetText (GUIEditor.edit[1])
@@ -54,27 +68,29 @@ addEventHandler("onClientGUIClick", GUIEditor.button[1],
     end, false
 )
 
+-- Register callback
 addEventHandler("onClientGUIClick", RegisterInfo.button[2],
     function ()
         triggerServerEvent ( "onGuiRegistration", localPlayer, sLogin, sPassword )
         triggerServerEvent ( "onGuiLogin", localPlayer, sLogin, sPassword )
         guiSetVisible (RegisterInfo.window[1], false)
-        showCursor (false)
+        --showCursor (false)
     end, false
 )
 
+-- Cancel callback
 addEventHandler("onClientGUIClick", RegisterInfo.button[1],
     function ()
         guiSetVisible (RegisterInfo.window[1], false)
     end, false
 )
 
+--Check register/login/incorrect data
 addEvent( "onPlayerRegister", true )
 addEventHandler( "onPlayerRegister", getRootElement(), 
 function( player )
     if getElementData ( localPlayer, "ClassicDM.Check" ) == true then
         guiSetVisible (GUIEditor.window[1], false)
-        showCursor (false)
     elseif getElementData ( localPlayer, "ClassicDM.Check" ) == false then
         outputChatBox ("Incorrect Passwrod")
     elseif getElementData ( localPlayer, "ClassicDM.Check" ) == "notRegister" then
