@@ -7,9 +7,11 @@
 
 function getAccountAlive( sName, sPassword )
 	if type ( getAccount ( sName ) ) == "userdata" then
-		showCursor (client, false)
 		local logInAcc = logIn ( client, getAccount ( sName ), sPassword )
 		setElementData (client, "ClassicDM.Check", logInAcc)
+		if logInAcc then
+			showCursor (client, false)
+		end
 	else
 		setElementData (client, "ClassicDM.Check", "notRegister")
 	end

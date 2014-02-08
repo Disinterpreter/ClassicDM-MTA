@@ -92,7 +92,7 @@ function( player )
     if getElementData ( localPlayer, "ClassicDM.Check" ) == true then
         guiSetVisible (GUIEditor.window[1], false)
     elseif getElementData ( localPlayer, "ClassicDM.Check" ) == false then
-        outputChatBox ("Incorrect Passwrod")
+        --outputChatBox ("Incorrect Passwrod")
     elseif getElementData ( localPlayer, "ClassicDM.Check" ) == "notRegister" then
         guiSetVisible (RegisterInfo.window[1], true)
         guiMoveToBack( GUIEditor.window[1] )
