@@ -20,8 +20,9 @@ addEventHandler ("onPlayerLogout", root,
 	end
 )
 
-addEventHandler ( "onPlayerSpawn", root,
+addEventHandler ("onPlayerSpawn", root,
 	function ()
-		setElementModel ( source, getAccountData (getPlayerAccount (source), "ClassicDM.PlayerSkin") )
+		setElementModel (source, getAccountData (getPlayerAccount (source), "ClassicDM.PlayerSkin"))
+		giveWeapon (source, 22, 100)
 	end
 )
