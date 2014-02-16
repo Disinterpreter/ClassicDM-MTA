@@ -55,12 +55,12 @@ showCursor (true)
 guiSetVisible (RegisterInfo.window[1], false)
 
 -- Login callback
-addEventHandler("onClientGUIClick", GUIEditor.button[1],
+addEventHandler( "onClientGUIClick", GUIEditor.button[1],
     function ()
-        sLogin = guiGetText (GUIEditor.edit[1])
-        sPassword = guiGetText (GUIEditor.edit[2])
-        if string.len (sPassword) >= 3 then
-            setElementData (localPlayer, "ClassicDM.AccName", sLogin)
+        sLogin = guiGetText ( GUIEditor.edit[1] )
+        sPassword = guiGetText ( GUIEditor.edit[2] )
+        if string.len ( sPassword ) >= 3 then
+            setElementData ( localPlayer, "ClassicDM.AccName", sLogin )
             triggerServerEvent ( "onGuiLogin", localPlayer, sLogin, sPassword )
         else
             outputChatBox ( "short password" )

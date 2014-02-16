@@ -32,46 +32,46 @@ guiSetVisible (SkinShop.window[1], false)
 
 -- Gridlist
 for k,v in pairs ( g_Skins ) do
-    local skinRow = guiGridListAddRow (SkinShop.gridlist[1])
+    local skinRow = guiGridListAddRow ( SkinShop.gridlist[1] )
     guiGridListSetItemText ( SkinShop.gridlist[1], skinRow, skinName, getSkinNameFromId (k), false, false )
     guiGridListSetItemText ( SkinShop.gridlist[1], skinRow, skinPrice, tonumber (v), false, false )
 end
 -- Gridlist click
-addEventHandler("onClientGUIClick", SkinShop.gridlist[1],
-    function ()
+addEventHandler( "onClientGUIClick", SkinShop.gridlist[1],
+    function (  )
     	local clickedSkin = guiGridListGetItemText ( SkinShop.gridlist[1], guiGridListGetSelectedItem ( SkinShop.gridlist[1] ), 1 )
-    	playerSkin = getSkinIdFromName (clickedSkin)
+    	local playerSkin = getSkinIdFromName (clickedSkin)
     	if playerSkin then setElementModel (localPlayer, tonumber (playerSkin)) end
     end, false
 )
 
 -- Button Buy
 addEventHandler("onClientGUIClick", SkinShop.button[1],
-    function ()
+    function (  )
     	if playerSkin then triggerServerEvent ( "onPlayerBuySkin", localPlayer, playerSkin ) end
         toggleAllControls ( true )
-        guiSetVisible (SkinShop.window[1], false)
-        showCursor (false)
-        setElementAlpha (eventMarker, 255)
+        guiSetVisible ( SkinShop.window[1], false )
+        showCursor ( false )
+        setElementAlpha ( eventMarker, 255 )
     end, false
 )
 -- Button cancel
 addEventHandler("onClientGUIClick", SkinShop.button[2],
-    function ()
+    function (  )
         toggleAllControls ( true )
-        guiSetVisible (SkinShop.window[1], false)
-        showCursor (false)
-        setElementModel (localPlayer, oldSkin)
-        setElementAlpha (eventMarker, 255)
+        guiSetVisible ( SkinShop.window[1], false )
+        showCursor ( false )
+        setElementModel ( localPlayer, oldSkin )
+        setElementAlpha ( eventMarker, 255 )
     end, false
 )
 -- Event Marker
 function showSkinShop( hitPlayer )
     if hitPlayer == localPlayer then
-        if not isPedInVehicle (hitPlayer) then
+        if not isPedInVehicle ( hitPlayer ) then
         	eventMarker = source
         	setElementAlpha ( eventMarker, 0 )
-        	oldSkin = getElementModel (localPlayer)
+        	oldSkin = getElementModel ( localPlayer )
             toggleAllControls ( false )
             guiSetVisible (SkinShop.window[1], true)
             showCursor (true)
@@ -81,6 +81,6 @@ end
 
 --Сycle
 for k,v in pairs ( g_SkinShopMarker ) do
-    skinshop = createMarker(g_SkinShopMarker[k][1], g_SkinShopMarker[k][2], g_SkinShopMarker[k][3] - 1, "cylinder", 2, 255, 0, 255)
+    skinshop = createMarker( g_SkinShopMarker[k][1], g_SkinShopMarker[k][2], g_SkinShopMarker[k][3] - 1, "cylinder", 2, 255, 0, 255 )
     addEventHandler ( "onClientMarkerHit", skinshop, showSkinShop )
 end

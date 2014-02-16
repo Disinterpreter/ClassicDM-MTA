@@ -32,13 +32,13 @@ guiSetVisible (g_Store.window[1], false)
 
 -- Gridlist
 for k,v in pairs ( g_Weapon ) do
-	local row = guiGridListAddRow (g_Store.gridlist[1])
+	local row = guiGridListAddRow ( g_Store.gridlist[1] )
 	guiGridListSetItemText ( g_Store.gridlist[1], row, NameColoumn, getWeaponNameFromID (k), false, false )
 	guiGridListSetItemText ( g_Store.gridlist[1], row, PriceColoumn, tonumber (v), false, false )
 end
 
 -- Gridlist click
-addEventHandler("onClientGUIClick", g_Store.gridlist[1],
+addEventHandler( "onClientGUIClick", g_Store.gridlist[1],
     function ()
     	local ClickedWeaponName = guiGridListGetItemText ( g_Store.gridlist[1], guiGridListGetSelectedItem ( g_Store.gridlist[1] ), 1 )
 		ClickGunId = getWeaponIDFromName ( ClickedWeaponName )
@@ -46,23 +46,20 @@ addEventHandler("onClientGUIClick", g_Store.gridlist[1],
 )
 
 -- Exit button
-addEventHandler("onClientGUIClick", g_Store.button[1],
-    function ()
+addEventHandler( "onClientGUIClick", g_Store.button[1],
+    function (  )
         toggleAllControls ( true )
-    	guiSetVisible (g_Store.window[1], false)
-    	showCursor (false)
+    	guiSetVisible ( g_Store.window[1], false )
+    	showCursor ( false )
     end, false
 )
 
 -- Buy button
-addEventHandler("onClientGUIClick", g_Store.button[2],
-    function ()
+addEventHandler( "onClientGUIClick", g_Store.button[2],
+    function (  )
         if ClickGunId then
             triggerServerEvent ( "onPlayerBuyWeapon", localPlayer, ClickGunId ) 
             setPedWeaponSlot ( localPlayer, getSlotFromWeapon ( ClickGunId ) )
-            --toggleAllControls ( true )
-            --guiSetVisible (g_Store.window[1], false)
-            --showCursor (false)
         end
     end, false
 )
@@ -80,7 +77,7 @@ end
 
 --Сycle
 for k,v in pairs ( g_WeaponMarker ) do
-	markers = createMarker(g_WeaponMarker[k][1], g_WeaponMarker[k][2], g_WeaponMarker[k][3] - 1, "cylinder", 2, 255, 0, 0)
+	markers = createMarker( g_WeaponMarker[k][1], g_WeaponMarker[k][2], g_WeaponMarker[k][3] - 1, "cylinder", 2, 255, 0, 0 )
 	addEventHandler ( "onClientMarkerHit", markers, showMarkers )
 end
 

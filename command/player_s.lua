@@ -9,8 +9,8 @@ addCommandHandler ( "pm",
 	function ( player, cmd, id, ... )
 		local tableText = { ... }
 		local text = table.concat ( tableText, " " )
-		if player ~=  g_Players[tonumber (id)] then
-			if g_Players[tonumber (id)] ~= nil then
+		if player ~= g_Players[tonumber ( id )] then
+			if g_Players[tonumber ( id )] ~= nil then
 				outputChatBox ( "#F2F200Message to #08F200".. getPlayerName (g_Players[tonumber (id)]) .." #F2F200: " .. text, player, 255, 255, 255, true )
 				outputChatBox ( "#F2F200Message from #08F200".. getPlayerName ( player ) .." #F2F200: " .. text, g_Players[tonumber (id)], 255, 255, 255, true )
 			else
@@ -25,9 +25,9 @@ addCommandHandler ( "pm",
 addCommandHandler ( "pay",
 	function ( player, cmd, id, amount )
 		if tonumber ( amount ) then
-			if (tonumber(amount) > 0 and getPlayerMoney(player) >= tonumber(amount)) then
+			if (tonumber ( amount ) > 0 and getPlayerMoney( player ) >= tonumber( amount ) ) then
 				if player ~=  g_Players[tonumber (id)] then
-					if g_Players[tonumber (id)] ~= nil then
+					if g_Players[tonumber ( id )] ~= nil then
 						takePlayerMoney ( player, amount )
 						outputChatBox ( "#F2F200You paid #08F200".. getPlayerName (g_Players[tonumber (id)]) .." #F2F200: " .. amount .. "$", player, 255, 255, 255, true )
 						givePlayerMoney ( g_Players[tonumber (id)], amount )

@@ -6,9 +6,9 @@
 --
 
 function playerBuySkin ( skinID )	
-	if getPlayerMoney (client) >= tonumber (g_Skins[skinID]) then
-    	takePlayerMoney (client, g_Skins[skinID])
-    	setElementModel (client, tonumber (skinID))
+	if getPlayerMoney ( client ) >= tonumber ( g_Skins[skinID] ) then
+    	takePlayerMoney ( client, g_Skins[skinID] )
+    	setElementModel ( client, tonumber ( skinID ) )
     	setAccountData ( getPlayerAccount (client), "ClassicDM.PlayerSkin", skinID )
 	else
 		outputChatBox ( "You don't have enough money", client )

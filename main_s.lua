@@ -36,9 +36,9 @@ addEventHandler ( "onPlayerWasted", root,
 		if killer and getElementType(killer) == "player" and getElementType(source) == "player" then
 			takePlayerMoney ( source, 50 )
 			givePlayerMoney ( killer, 50 )
-			setTimer( spawnPlayer, 4000, 1, source, positions[iRandom][1], positions[iRandom][2], positions[iRandom][3] )
+			setTimer( spawnPlayer, 4000, 1, source, g_Positions[iRandom][1], g_Positions[iRandom][2], g_Positions[iRandom][3] )
 		else
-            setTimer( spawnPlayer, 4000, 1, source, positions[iRandom][1], positions[iRandom][2], positions[iRandom][3] )
+            setTimer( spawnPlayer, 4000, 1, source, g_Positions[iRandom][1], g_Positions[iRandom][2], g_Positions[iRandom][3] )
         end
     end
 )

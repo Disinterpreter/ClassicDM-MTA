@@ -1,6 +1,5 @@
 <meta>
 	<script src="main_s.lua" />
-	<script src="main_cl.lua" type="client" />
 	
 	<script src="tools/skinFucts.lua" type="shared" />
 	<script src="tables.lua" type="shared" />
